@@ -1,0 +1,447 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summative03</title>
+    <!-- Bootstrap 
+		<link href="Summative03_files/bootstrap.css" rel="stylesheet">
+		<link href="Summative03_files/w3.css" rel="stylesheet">
+		<link href="Summative03_files/eProf.css" rel="stylesheet" type="text/css">
+	-->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+      <input name="InstID" id="InstID" value="00617282" type="hidden">
+    <h2 class="w3-text-blue">MIS362 Fall2017  
+    Assignment Summative03-Calavera DevOps Pipeline</h2>
+    <div class="container-fluid"></div>
+    <div class="row">
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="email">Email:</label>
+        <!-- Enter your winona.edu email address in the VALUE field below   GROK --> 
+        <input class="w3-input w3-border" name="email" id="email" value=""  type="text">
+      </div>
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="FirstName">First Name:</label>
+        <!-- Enter your first name in the VALUE field below   GROK --> 
+        <input class="w3-input w3-border" name="FirstName" id="FirstName" value="EnterYourFirstName" type="text">
+      </div>
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="LastName">Last Name:</label>
+        <!-- Enter your last name in the VALUE field below   GROK --> 
+        <input class="w3-input w3-border" name="LastName" id="LastName" value="EnterYourLastName" type="text">
+      </div>
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="StarID">StarID:</label>
+        <!-- Enter your starID in the VALUE field below   GROK -->         
+        <input class="w3-input w3-border" name="pin" id="pin" value="EnterYourStarID" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="Semester">Semseter:</label>
+        <input class="w3-input w3-border" name="semester" id="semester" value="Fall2017" type="text">
+     </div>
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="Class">Class:</label>
+        <input class="w3-input w3-border" name="class" id="class" value="MIS362" type="text">
+      </div>
+      <div class="col-lg-3">
+        <label class="w3-label w3-text-blue" for="Section">Section:</label>
+        <!-- Enter your section in the VALUE field below   GROK -->         
+        <input class="w3-input w3-border" name="section" id="section" value="01" type="text">
+      </div>
+      <div class="col-lg-3"> 
+        <label class="w3-label w3-text-blue" for="Assignment">Assignment:</label>
+        <input class="w3-input w3-border" name="assignment" id="Assignment" value="Summative03" type="text">
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+        <input class="w3-input w3-border w3-text-red" name="Submit" value="Submit" type="submit">
+    </div>
+  </div>
+  
+  <div id="points">1450 Points </div>
+  
+      <article class="h3">
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">  Learning Objectives</a></div>
+      </article>
+      
+    <div id="Objectives" class="collapse in"> 
+      <article class="row">
+        <div class="col-lg-12">
+          <p>These exercises introduce basic skills and technologies used in a Linux  product development environment.</p>
+          <p>After completing this assignment you will be able to:</p>
+          <ol>
+            <li>Create a virtual machine cluster based application development environment</li>
+            <li>Review your development environment</li>
+            <li>Capture and review your log files </li>
+           </ol>
+        </div>
+      </article>
+    </div>
+  
+  
+      <article class="h3">
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+      </article>
+      
+      <div id="Overview" class="collapse">
+      <article class="row">
+        <div class="col-lg-12">The goal of this assignment is to familiarize you with a Linux based product development environment. <br>
+          <p>You are expected to devlop a working knowledge of the following.<br>
+            If you are having trouble there are several resources available, besides a Google Search<br>
+            You can also ask a teaching assistant or ask the instructor for assistance.</p>
+          <ol>
+            <li>Installing applications.
+            	<ol>
+                	<li>Virtual Box</li>
+                    <li>Chef Development Kit</li>
+                    <li>Vagrant</li>
+                </ol>
+            </li>
+            <li>Creating a virtual environment and provisioning applications from scripts
+            	<ol>
+                	<li>Troubleshooting</li>
+                    <li>Learning basic Linux or Windows CLI (command line interface) commands</li>
+                    <li>Following the <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" target="_blank">Calavera Project</a></li>
+                </ol>
+                
+            </li>
+          </ol>
+         </div>
+      </article>
+      </div>
+      
+      <article class="h3">
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-DevOps Environment</a></div>        
+      </article>
+      
+     <div id="Exercise01" class="collapse"> 
+      <article class="row">
+        <div class="col-lg-12">  
+          <p>Refer to these instructions, download and install the following programs on your laptop:</p>
+          <ol>
+              <li><a href="https://www.virtualbox.org/" target="_blank">Virtual Box for Windows  </a> (~116MB) using the default settings</li> 
+              <li>the <a href="https://downloads.chef.io/chef-dk/" target="_blank">Chef Development Kit</a> (~326MB) using the default settings</li>
+              <li><a href="http://www.vagrantup.com/downloads.html" target="_blank">Vagrant</a> (~165MB) using the default settings, then restart your laptop</li>
+              <li>the <a href="https://github.com/berkshelf/vagrant-berkshelf" target="_blank">Vagrant Berkshelf plugin </a>, by clicking the start button, typing in 'cmd' to open the Command Prompt window, then typing in <code> vagrant plugin install vagrant-berkshelf </code><br> 
+              <img src="Summative03_files/BerkshelfPlugIn.PNG" class="img-responsive" alt="Berkshelf plugin" width="733" height="313"><br></li>
+              <li>the <a href="https://github.com/dotless-de/vagrant-vbguest" target="_blank">Vagrant VBoxGuest plugin</a>, by typing in the Command Prompt window <code>vagrant plugin install vagrant-vbguest </code><br> 
+              <img src="Summative03_files/VBguestPlugIn.PNG" class="img-responsive" alt="VBguest Plugin" width="636" height="149"></li>
+          </ol>
+          
+           <br>
+            Refer to the <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" target="_blank">Calavera Project</a> Windows installation instructions as needed.<br>
+          <p></p>
+        </div>
+      </article>
+      
+      <article class="row"> 
+        <div class="col-lg-12"> 
+          <p>Install the above software to prepare your development environment.</p>
+            <div class="col-lg-12 w3-label w3-text-blue">
+                <p>(200) 1. Make a screen shot showing Virtual Box, Chef and Vagrant running on your laptop. <br>
+                Use the Snipping Tool to make a screen shot that shows the History.<br>
+                Save the screen shot as "Ex1_DevOps" as a .gif, .png or 
+.jpg file in an appropriate folder location as you will be needing it 
+later.<br>
+                </p>
+            </div>        
+        </div>  
+    </article>
+</div>    
+
+
+      
+      
+      <article class="h3">
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-GitHub Cloning</a></div>
+      </article>
+        <div id="Exercise02" class="collapse">  
+          <article class="row">
+            <div class="col-lg-12">
+              <p>Use GitBash to obtain the necessary script files.<br>
+              Note: GitBash must have already been properly installed for this to work.</p> 
+                   <p> Using Windows File Explorer, navigate to C:\Users\'StarID'\Documents\GitHub<br>
+                       Right click the folder 'GitHub' and choose 'Git Bash Here'.<br>
+                       Type in the following to Git Bash, which has 'MINGW64' in the titlebar.<br>
+                       <code>git clone https://github.com/CharlesTBetz/Calavera.git</code><br>
+                       After downloading the files, type in <code>cd Calavera</code> so that 'Calvera' is the working directory, so you can run scripts.<br>
+                       <img src="Summative03_files/CloneCalavera.PNG" class="img-responsive" alt="cloning Calavera" width="540" height="270">
+                   </p>                  
+
+                       
+                <div class="col-lg-12 w3-label w3-text-blue">
+                   
+                   <p>(100) 2. Make a screen shot of your Windows File Explorer GitHub 'Calavera' directory showing the files and folders. <br>
+            Use the Snipping Tool to make a screen shot that shows the History.<br>
+            Save the screen shot  as "Ex2_GitHub" as a .gif, .png or 
+.jpg file in an appropriate folder location as you will be needing it 
+later.
+        <br>
+        </p>
+
+                </div>       
+            </div>
+          </article>
+       </div>
+      
+      
+      <article class="h3">
+         <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Scripted Virtual Machines</a></div>
+      </article>
+      
+        <div id="Exercise03" class="collapse">  
+          <article class="row">
+            <div class="col-lg-12">
+              <p>Virtual machines can easily be created by running Vagrant, and applications can be installed using Chef.<br>
+                   </p><p>In GitBash type in the following to create your virtual development/operations environment. <br>
+                   This script will take about 20 minutes to run. <br>
+                   <code>./winstart.sh </code> <br>
+                   You will receive multiple User Account Control (UAC) 
+notifications as the virtual machines start, and a network security 
+alert.<br>
+                   Authorize all with the default values.<br>
+                   This is downloading and installing a 1GB Ubuntu 
+image, it may take about 25 minutes to complete, depending on your 
+network connection, and how many packages need to be updated.<br>
+                   As it runs there will be a lot of text written to the Git Bash window.<br>
+                   <img src="Summative03_files/GetUbuntu.PNG" class="img-responsive" alt="getting Ubuntu" width="608" height="137"><br></p>
+              
+              <p></p>          
+                <div class="col-lg-12 w3-label w3-text-blue">
+                   
+                  <p>(200) 3. After running the script, in Git Bash, 
+take a screen shot of the last few lines on your screen, which should 
+look like this, but with your StarID<br>
+                    <img src="Summative03_files/CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success" width="625" height="216"><br> Use the Snipping Tool to make the screen shot <br>
+            Save the screen shot  as "Ex3_UbuntuVM" as a .gif, .png or 
+.jpg file in the same folder location as the other screen shots as you 
+will be needing it later.<br>
+                   
+              </p></div>  
+        <p></p>
+     
+            </div>
+          </article>
+       </div>
+
+
+
+
+      <article class="h3">
+         <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Multiple Virtual Machines</a></div>
+      </article>
+      
+        <div id="Exercise04" class="collapse">  
+          <article class="row">
+            <div class="col-lg-12">
+              <p>Additional virtual machines for your company can now 
+easily be created by running Vagrant, and applications can be installed 
+using Chef.<br>
+                   </p><p>In GitBash type in the following to create your virtual development/operations environment. <br>
+                   Note that this will take about 20 minutes to run. <br>
+                   <code>vagrant up cerebro1 brazos1 espina1 hombros1</code> <br>
+                   Note that you will again be asked to approve several UAC warning messages.<br>
+              </p>          
+                <div class="col-lg-12 w3-label w3-text-blue">
+                
+                
+                   
+                  <p>(200) 4. After running the script, in Git Bash, 
+take a screen shot of the last few lines on your screen, which should 
+look like this, but with your StarID<br>
+                    <img src="Summative03_files/CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success" width="625" height="216"><br> Use the Snipping Tool to make the screen shot <br>
+            Save the screen shot  as "Ex4_UbuntuVM" as a .gif, .png or 
+.jpg file in the same folder location as the other screen shots as you 
+will be needing it later.<br>
+            
+            
+            
+              </p><p>(50) 5. Review the materials on <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" target="_blank">the Calvera project</a> and answer the following question.<br>
+              </p>
+              <p>What is the purpose of cerebro?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q5" id="q5" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+              <p>(50) 6. Review the materials on the Calvera project and answer the following question.<br>
+              </p>
+              <p>What is the purpose of brazos?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q6" id="q6" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+              <p>(50) 7. Review the materials on the Calvera project and answer the following question.<br>
+              </p>
+              <p>What is the purpose of espina?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q7" id="q7" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+              <p>(50) 8. Review the materials on the Calvera project and answer the following question.<br>
+              </p>
+              <p>What is the purpose of hombros?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q8" id="q8" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+                   
+              </div>  
+        <p></p>
+     
+            </div>
+          </article>
+       </div>
+
+
+
+      <article class="h3">
+         <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Inspecting Virtual Machines</a></div>
+      </article>
+      
+        <div id="Exercise05" class="collapse">  
+          <article class="row">
+            <div class="col-lg-12">
+              <p>Now that you have the four virtual machines provisioned, open Virtual Box to examine the settings.<br>
+              </p>          
+                <div class="col-lg-12 w3-label w3-text-blue">
+                
+                
+                   
+                  <p>(200) 9. After opening Virtual Box, take a screen shot of the left side of the screen, which should list four virtual machines.<br>
+                    Use the Snipping Tool to make the screen shot <br>
+            Save the screen shot  as "Ex5_VirtualBox" as a .gif, .png or
+ .jpg file in the same folder location as the other screen shots as you 
+will be needing it later.<br>
+            
+            
+            
+              </p><p>(50) 10. Review the Virtual Box settings and answer the following question.<br>
+              </p>
+              <p>What is the cerebro operating system?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q10" id="q10" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+              <p>(50) 11. Review the Virtual Box settings and answer the following question.<br>
+              </p>
+              <p>How many network adapters are there in brazos?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q11" id="q11" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+              <p>(50) 12. Review the Virtual Box settings and answer the following question.<br>
+              </p>
+              <p>How many shared folders, and list the 'Machine Folder' used for the first one, for espina?<br>
+              </p>
+              
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q12" id="q12" size="120" maxlength="10" value="Enter your answer here" type="text"> <br>
+
+                   
+              </div>  
+        <p></p>
+     
+            </div>
+          </article>
+       </div>
+
+
+
+
+
+
+
+      
+       <article class="h3">
+        <div class="col-lg-12"><a href="#Exercise06" class="btn btn-info" data-toggle="collapse">Exercise 6-Assignment as pdf</a></div>
+      </article>
+      
+    <div id="Exercise06" class="collapse">
+      <article class="row">
+        <div class="col-lg-12"><p>For this Exercise, please read all of these instructions.<br>
+        Make sure that you have completed all the previous exercises by 
+filling in your answers, and publishing them to your website.<br>
+        Then browse to your http://classes.winona.edu webiste, open all 
+the Exercises so that they are visible, save it as .pdf file in the same
+ location that you saved all of your screen shots for this assignment.<br>
+        </p>
+        </div>
+        <div>          
+            <div class="col-lg-12 w3-label w3-text-blue">
+            (100) 13. Assignment .pdf file creation.<br>
+            </div>  
+        </div>     
+      </article>
+     </div>
+     
+      
+      <article class="h3">
+        <div class="col-lg-12"><a href="#Exercise07" class="btn btn-info" data-toggle="collapse">Exercise 7-Combine Assignment and Screen Shots</a></div>
+      </article>
+      
+    <div id="Exercise07" class="collapse"> 
+      <article class="row">
+        <div class="col-lg-12"> 
+        <p>To proceed you must have Windows 10 which includes &#39;Print to PDF&#39; installed. You know it is installed when one of the print dialog box choices is &quot;Microsoft Print to PDF&quot;<br />
+            <img alt="print to pdf" class="auto-style1" src="F00_PrintToPDF.JPG" /><br><br />
+
+            Refer to this url and follow these steps.  <a href="https://www.howtogeek.com/248462/how-to-combine-images-into-one-pdf-file-in-windows/" target="_blank">https://www.howtogeek.com/248462/how-to-combine-images-into-one-pdf-file-in-windows/</a>  <br />
+            You will be creating one .pdf (portable document format) file from the six screen shots that you have taken.</p>
+        
+        <ol>
+            
+              
+          <li> Open File Explorer, make sure the screen shot files are properly named(Ex1.. , Ex2.. , Ex3.. ) and sorted in Ascending order.&nbsp; </li>
+            <li> Select the six screen shots to be combined. </li>         
+          <li>Right Click and select &#39;Print&#39; from the pop-up menu.      </li>    
+          <li>See the howtogeek article for more options.</li>
+            <li>Click on &#39;Print&#39; and save the file with a name such as &quot;xxx...ScreenShots.pdf&quot; in an appropriate location where you can easily find it again, such as OneDrive-MNSCU/...            </li>
+            <li>Remember to use PDFill when you need to Merge the screen shot .pdf file with any other .pdf file(s)</li>
+          </ol>  
+        <div class="col-lg-12 w3-label w3-text-blue">
+        <p>(100) 14. Upload your file 'AssignmentSummative03.pdf' to the D2L 'Summative03' Assignment Folder</p>
+
+        </div>
+        </div> 
+      </article>
+    </div>
+       
+<div>When all the Exercises are completed, while viewing this assignment
+ on your https://classes.winona.edu/... website, press the Submit button
+ below. </div>
+     
+  <div class="row">
+    <div class="col-lg-12"><input class="w3-input w3-border w3-text-red" name="Submit" value="Submit" type="submit"></div>
+  </div>
+
+  
+  </form> 
+ 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins)  
+	<script src="Summative03_files/jquery-1.js"></script>
+   -->
+   
+	<!-- Include all compiled plugins (below), or include individual files as needed  
+		<script src="Summative03_files/bootstrap.js"></script>
+	-->
+  
+</body>
+</html>
