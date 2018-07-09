@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../js/constants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative05</title>
+</head>
+
+<body onload="setVariables()"> 
+
+  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+    <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+    <h1 class=" text-center">Work Management</h1>
+
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="FirstName">First Name:</label>
+        <input class="form-control" name="FirstName" id="FirstName"  type="text" value="default first name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="LastName">Last Name:</label>
+        <input class="form-control" name="LastName" id="LastName"  type="text" value="default last name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="pin">StarID:</label>
+        <input class="form-control" name="pin" id="pin"  type="text" value="default StarID" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="email">Email:</label>
+        <input class="form-control" name="email" id="email"  type="email" value="default email address" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="semester">Semester:</label>
+        <input class="form-control" name="semester" id="semester"  type="text" value="default" readonly="readonly">
+     </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="class">Class:</label>
+        <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="section">Section:</label>
+        <input class="form-control" name="section" id="section"  value="default" type="text"  readonly="readonly">
+      </div>
+      <div class="col-lg-3"> 
+        <label class="text-primary" for="assignment">Assignment:</label>
+        <input class="form-control" name="assignment" id="assignment" value="Summative05" type="text" readonly="readonly">
+      </div>    
+    </div>
+<!-- -end-Student, class and assignment information-end -->
+
+<!-- Calculate the correct path for saving the files -->
+<script>Path = startPath + xStarID + "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script> 
+
+
+        <div class="col-lg-12">
+            <br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br />
+        </div>
+  
+        <div class="col-lg-12 h3 text-danger">
+            850 Points <hr />
+        </div>
+      
+<!-- -start-objectives-start -->
+    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>      
+      <div id="Objectives" class=" collapse in col-lg-12">
+
+<!--Above this line similar except for Assignment number and title   -->
+          <p>These exercises introduce the several concepts of work management.</p>
+          <p>After completing this assignment you will be able to:</p>
+          <ol>
+            <li>Identify the major building blocks of a work management system</li>
+            <li>Identify the major elements in a Kanban system</li>
+            <li>Identify the major elements in a Scrum system</li>
+            <li>Choose a work management system appropriate to the product development needs of your organization </li>
+           </ol>
+          <hr />
+        </div>
+  
+  
+        <div class="col-lg-12"><a href=" #Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+      
+      <div id="Overview" class="collapse in col-lg-12">
+     <p> The goal of this assignment is to familiarize you with the various work management systems. <br />
+          You are expected to devlop a working knowledge of the following.<br />
+            If you are having trouble there are several resources available, besides a Google Search<br />
+            You can also ask a teaching assistant or ask the instructor for assistance.</p>
+          <ol>
+            <li>Work Management Tools
+            	<ol>
+                	<li>Kanban</li>
+                    <li>Scrum</li>
+                </ol>
+            </li>
+            <li>Work Management Environments
+            	<ol>
+                	<li>Face to face</li>
+                    <li>Distributed</li>
+                    <li>Help desks</li>
+                </ol>
+                
+            </li>
+          </ol>
+          <hr />
+         </div>
+      
+        <div class=" col-lg-12"><a href=" #Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Work Management Systems</a></div>        
+      
+     <div id="Exercise01" class="collapse in col-lg-12"> 
+          <p>Compare the feature sets of the following Work Management systems:</p>
+          <ol>
+              <li>Kanban</li> 
+              <li>Scrum</li>
+          </ol>
+          
+<p>            Review the literature on features and functionality discussed in the book and by doing a web search.<br />
+            Develop a list of what you feel are the top 5 most important features offered by each system.
+         </p>
+      
+          <p>Discuss this list with members of your group.<br />
+          Hint: Create a spreadsheet containing two columns, with the system name at the top.<br />
+          Then list all the features you can find in your research, and assign each a priority.<br />
+          Base the priority on the value of the feature to the product you are developing in Project04.</p>
+                
+              <p>(50) 1. What are the top five features available in Kanban?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input type="text" name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your answer here"> <br /><br />
+
+              <p>(50) 2. What are the top five features available in Scrum?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input type="text" name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your answer here"> <br />
+         <hr />
+
+     </div>    
+
+
+      
+      
+        <div class="col-lg-12"><a href=" #Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Work Management Software</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12">  
+              <p>Research Trello, which uses the kanban paradigm to manage projects.<br />
+                <a href="https://trello.com/" class="bg-info text-white" target="_blank" >Trello website</a><br />
+              <a href="https://en.wikipedia.org/wiki/Trello" class="bg-info text-white" target="_blank">Wikipedia overview of Trello</a><br />
+              Refer to <a href="https://en.wikipedia.org/wiki/Comparison_of_project_management_software" class="bg-info text-white" target="_blank">this Wikipedia article</a> to get an overview of the many available project management software applications.<br />
+              Feel free to create a Trello account if you would like.
+               </p>
+               
+                   
+              <p>(50) 3. What are the top five essential features of a program like Trello that would be of the most value developing your product?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input type="text" name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your answer here"> <br /><br />
+              
+              <p>(50) 4. Contemplate your product development. Write a brief statement whether you prefer working face-to-face, remotely, or if this is of no concern.</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input type="text" name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your answer here"> <br />
+            <hr />
+      
+       </div>
+      
+      
+         <div class="col-lg-12"><a href=" #Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Open Source Kanban</a></div>
+      
+        <div id="Exercise03" class="collapse in col-lg-12">  
+              <p>There are several open source options for implementing kanban methodology in a distributed environment.</p>
+              <p>The power and dynamics of face to face interaction should not be discounted.<br />
+               But a digital kanban board can be used in both face to face encounters, but also serves as a way make your board 'portable'.<br />
+               There are positives and negatives associated with using a digital kanban board, the best way to find what works for you is through experience.<br />
+              </p>
+              <p>Read the reviews on <a href="https://opensource.com/alternatives/trello" class="bg-info text-white" target="_blank">five open source digital kanban tools</a> by Jason Baker.<br />
+              Discuss these tools with your group and class members.</p>              
+               
+                       
+                   
+                  <p>(50) 5. Which digital kanban tool is your favorite?<br />
+                                
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input type="text" name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your answer here"></p><br />
+     
+                  <p>(50) 6. Briefly state a reason why this tool is your favorite.<br />
+                                
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input type="text" name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here"></p>
+            <hr />
+
+        </div>
+
+
+         <div class="col-lg-12"><a href=" #Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-TaskBoard</a></div>
+      
+        <div id="Exercise04" class="collapse in col-lg-12">  
+              <p>Visit the <a href="https://taskboard.matthewross.me/" class="bg-info text-white" target="_blank">TaskBoard website</a>.<br />
+              Review the available features.  Note that it could be self-hosted.<br />
+              </p>   
+              <p>Browse to the <a href="https://taskboard.matthewross.me/demo.html" class="bg-info text-white" target="_blank">TaskBoard Demo website</a>.<br />
+              Read the instructions.<br />
+              Then using either the top five tasks from Summative04, Exercise 5; or using new tasks, create five tasks on TaskBoard.</p>       
+            
+                  <p>(50) 7. Reflect on the process of creating these tasks.<br />
+                  Consider factors such as ease of use, ability to enter information you deemed critical and workflow.<br />
+                  What feature of Taskboard do you like best?<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input type="text" name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your answer here"> </p>
+    
+                    <p>(100) 8. Make a screen shot showing your five tasks entered into TaskBoard.<br />
+                    Use the Snipping Tool to make a screen shot that shows the entire board.<br />
+                    Save the screen shot as "Ex4_TaskBoards" as a .gif, .png or .jpg file in an appropriate folder location as you will be needing it later.<br />
+                    </p>
+                  <hr />
+
+              </div>
+
+
+         <div class="col-lg-12"><a href=" #Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Restyaboard</a></div>
+      
+        <div id="Exercise05" class="collapse in col-lg-12">  
+              <p>Visit the <a href="http://restya.com/" class="bg-info text-white" target="_blank">Restyaboard website</a>.<br />
+              Review the available features.  Note that it could be self-hosted.<br />
+              </p>   
+              <p>Browse to the <a href="http://restya.com/board/demo" class="bg-info text-white" target="_blank">Restyaboard Demo website</a>.<br />
+              Read the instructions.<br />
+              Then using either the top five tasks from Summative04, Exercise 5; or using new tasks, create five tasks on Restyaboard.</p> 
+                    
+            
+                  <p>(50) 9. Reflect on the process of creating these tasks.<br />
+                  Consider factors such as ease of use, ability to enter information you deemed critical and workflow.<br />
+                  What feature of Restyaboard do you like best?<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input type="text" name="q9" id="q9" size="120" maxlength="120" class="form-control" value="Enter your answer here"> </p>
+    
+                    <p> Make a screen shot showing your five tasks entered into Restyaboard.<br />
+                    Use the Snipping Tool to make a screen shot that shows the entire board.<br />
+                    (100) 10.  Save the screen shot as "Ex5" as a .gif, .png or .jpg file in an appropriate folder location as you will be needing it later.<br />
+                    </p>
+         </div>  
+
+      <div  class="col-lg-12 text-danger" >
+         <h2>Screen Shot Ex5</h2>
+          <hr />
+      </div>     
+
+<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+     
+    <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+      
+    <div id="ExercisePDF" class="collapse in  col-lg-12"> 
+            <p>Use a web browser to verify that you have published your website to https://classes.winona.edu/... <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible. <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <span id="dPath" ></span>              
+<script>document.getElementById("dPath").innerHTML = Path; </script>' folder.<br /> 
+</p>
+           <br />
+               
+          <p>(50) 11. Save your file 'WebPage.pdf' to the ' 
+                  <span id="ePath" ></span>              
+<script>document.getElementById("ePath").innerHTML = Path; </script>' folder.<br /> 
+
+
+          </p>
+
+      <div  class="text-danger" >
+         <h2>WebPage.pdf</h2>
+          <hr />
+      </div>
+
+        <p>  Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+        
+        <ol>             
+          <li> Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+          <li> Select all of the screen shots to be combined. </li>         
+          <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+          <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>    
+          <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <span id="fPath" ></span>              
+              <script>document.getElementById("fPath").innerHTML = Path; </script>' folder.<br /> </li>
+        </ol>
+
+
+          <p>(50) 12. Save your file 'ScreenShots.pdf' to the ' 
+                  <span id="gPath" ></span>              
+<script>document.getElementById("gPath").innerHTML = Path; </script>' folder.<br /> 
+
+          </p>
+
+      <div  class="text-danger" >
+         <h2>ScreenShots.pdf</h2>
+          <hr />
+      </div>
+
+
+       <p>  &nbsp;</p>
+         <p>  Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative05.pdf</strong>&#39; in ' 
+                  <span id="hPath" ></span>              
+<script>document.getElementById("hPath").innerHTML = Path; </script>' folder.<br /> 
+
+         </p>
+
+
+        <p>(50) 13. Upload your file 'Summative05.pdf' to the D2L 'Summative05' Assignment folder.</p>
+
+      <div  class="text-danger" >
+         <h2>Summative05.pdf</h2>
+      </div>
+      <hr />
+
+        </div> 
+
+
+
+
+  <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+ 
+  <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+                <p>Use a browser to view your completed and published website at: https://classes.winona.edu/...      <br /> 
+                    Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>  </p>
+
+            (50) 14. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br /><br />
+
+            (50) 15. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.</div> 
+           <hr />
+
+ 
+     
+      <div class="col-lg-12"><br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br /></div>
+
+  
+  </form> 
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted" ></div>
+
+   <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../js/bootstrap.js"></script>
+  
+</body></html>
