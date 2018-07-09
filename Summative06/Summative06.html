@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../js/constants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative06</title>
+</head>
+
+<body onload="setVariables()"> 
+
+  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+    <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+    <h1 class=" text-center">Operations Management</h1>
+
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="FirstName">First Name:</label>
+        <input class="form-control" name="FirstName" id="FirstName"  type="text" value="default first name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="LastName">Last Name:</label>
+        <input class="form-control" name="LastName" id="LastName"  type="text" value="default last name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="pin">StarID:</label>
+        <input class="form-control" name="pin" id="pin"  type="text" value="default StarID" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="email">Email:</label>
+        <input class="form-control" name="email" id="email"  type="email" value="default email address" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="semester">Semester:</label>
+        <input class="form-control" name="semester" id="semester"  type="text" value="default" readonly="readonly">
+     </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="class">Class:</label>
+        <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="section">Section:</label>
+        <input class="form-control" name="section" id="section"  value="default" type="text"  readonly="readonly">
+      </div>
+      <div class="col-lg-3"> 
+        <label class="text-primary" for="assignment">Assignment:</label>
+        <input class="form-control" name="assignment" id="assignment" value="Summative06" type="text" readonly="readonly">
+      </div>    
+    </div>
+<!-- -end-Student, class and assignment information-end -->
+
+<!-- Calculate the correct path for saving the files -->
+<script>Path = startPath + xStarID + "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script> 
+
+
+        <div class="col-lg-12">
+            <br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br />
+        </div>
+  
+        <div class="col-lg-12 h3 text-danger">
+            850 Points <hr />
+        </div>
+      
+<!-- -start-objectives-start -->
+    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>      
+      <div id="Objectives" class=" collapse in col-lg-12">
+
+<!--Above this line similar except for Assignment number and title   -->
+          <p>These exercises introduce  several concepts of operations management.</p>
+          <p>After completing this assignment you will be able to:</p>
+          <ol>
+            <li>Identify the major components of an operations management system</li>
+            <li>Identify and distinguish development and operations work</li>
+            <li>Identify and explain systems monitoring and event management</li>
+            <li>Create a plan that factors operational feedback into product design</li>
+            <li>Identify the important features and impact of dependency analysis on your organization</li>
+            <li>Explain the importance of layered complexity in modern systems design</li>
+           </ol>
+          <hr />
+        </div>
+  
+  
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+      
+      <div id="Overview" class="collapse in col-lg-12">
+     <p> The goal of this assignment is to familiarize you with the various operations management systems. <br />
+          You are expected to devlop a working knowledge of the following.<br />
+            If you are having trouble there are several resources available, besides a Google Search<br />
+            You can also ask a teaching assistant or ask the instructor for assistance.</p>
+          <ol>
+            <li>Operations Management Tools
+            	<ol>
+                	<li>Systems Monitoring</li>
+                    <li>Event Management</li>
+                </ol>
+            </li>
+            <li>Change Management </li>
+            <li>Incident Management</li>
+            <li>Operatonal Feedback</li>
+            <li>Performance Management</li>
+                </ol>
+          <hr />
+          
+         </div>
+      
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Operations Management-ping</a></div>        
+      
+     <div id="Exercise01" class="collapse in col-lg-12"> 
+          <p>Research the term '<a href="https://en.wikipedia.org/wiki/Ping_%28networking_utility%29" class="bg-info text-white" >ping</a>' in the context of a networking utility.<br />
+          Then contemplate and answer the following questions.  </p>
+          <p>Discuss the ping software utility with members of your group and fellow classmates.<br />
+          Consider the origins of ping.<br />
+          Consider how ping can be used in troubleshooting.<br />
+          </p>
+                
+              <p>(50) 1. Briefly state why is 'ping' concerned with packet loss.</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+
+              <p>(50) 2. What does it mean if a 'ping' is not ICMP packet does not receive a reply?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br />
+         <hr />
+               
+                
+            </div>        
+
+      
+      
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Ping</a></div>
+
+        <div id="Exercise02" class="collapse in col-lg-12">  
+              <p>Open two Command Prompt Windows on your laptop by pressing the 'Start' button and typing <br /><code>cmd</code><br />
+              You are now looking at a '<a href="https://en.wikipedia.org/wiki/Command-line_interface" class="bg-info text-white" >Command Line Interface</a>' </p>
+               
+                   
+              <p>(50) 3. In the first window type <br /><code>ping www.ibm.com</code> Watch what appears in the window.<br />
+              In the second window type <br /><code>ping www.amazon.com</code> Watch what appears in the window.<br />
+              Briefly explain the difference in results.
+              </p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+              
+              <p>(50) 4. In one of the command line windows type in <code>ping www.winona.edu</code> and examine the results.<br />
+              Briefly explain the purpose of the information provided by the 'TTL' parameter.<br />
+              An example of output is shown below.</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+              <img src="PingWSU.PNG" class="img-responsive" alt="ping WSU" ><br />
+              
+                <p>Use the Snipping Tool to make a screen shot 
+of a command prompt window showing the results of a ping command issued 
+against Professor Paulson's Azure website.<br />
+
+
+              (100) 5.   Save the screen shot as "Ex2_Ping" as a .gif, .png or 
+.jpg file in an appropriate folder location as you will be needing it 
+later.<br />
+                </p>
+
+
+                </div>
+      <div  class="col-lg-12 text-danger" >
+         <h2>Screen Shot Ex2</h2>
+          <hr />
+      </div>     
+      
+      
+         <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Traceroute</a></div>
+      
+        <div id="Exercise03" class="collapse in col-lg-12">  
+              <p>Research the '<a href="https://en.wikipedia.org/wiki/Traceroute" class="bg-info text-white" >tracert</a>' command.  Be careful of the spelling.</p>
+              <p>Discuss possible uses of this command with your group and classmates.<br />
+               Consider how tracert can be used in troubleshooting.<br />
+               As in Exercise 2, open a Command Prompt window.<br />
+               This time type <code>tracert www.ibm.com</code>  Watch what appears in the window.<br />
+               <br />
+              
+              </p>
+              
+                   
+                  <p>(50) 6. Briefly explain the significance of the output.<br />
+                                
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"></p><br />
+     
+                  <p>(50) 7. Wait a few minutes.<br />
+                  Open another command prompt window, type in the same command, press the 'Enter' key, and examine the output.<br />
+                  Briefly explain the significance of the output being different.<br />
+                                
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"></p><br />
+                  
+                  <p> Use the Snipping Tool to make a screen shot of a command prompt window.<br />
+                  In this window show the results of a ping command issued against Professor Paulson's Azure website.<br />
+                 (100) 8. Save the screen shot as &quot;Ex3&quot; as a .gif, .png or .jpg file in an appropriate folder location as you will be needing it  later.</p>
+                </div>
+      <div  class="col-lg-12 text-danger" >
+         <h2>Screen Shot Ex3</h2>
+          <hr />
+      </div>     
+
+
+         <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Nagios</a></div>
+      
+        <div id="Exercise04" class="collapse in col-lg-12">  
+              <p>Visit the <a href="https://www.nagios.org/" class="bg-info text-white" >Nagios website</a>.<br />
+              Review the available features.  Note that it is open source.<br />
+              </p>   
+            
+                  <p>(50) 9. Reflect on the use of this software.<br />
+                  Consider factors such as ease of use and output provided.<br />
+                  List a feature of Nagios that you like best, with a brief reason for your choice.<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q9" id="q9" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> </p>
+            <hr />
+
+        </div>  
+
+         <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Network Monitoring and Management</a></div>
+      
+        <div id="Exercise05" class="collapse in col-lg-12">  
+              <p>Consider the latter sections of Chapter 6 that discuss network monitoring and management.<br />
+              Contemplate the load put on a website such as Amazon.com or Target.com during Black Friday.<br />
+              Read this Netflix Tech Blog posting on the <a href="http://techblog.netflix.com/2011/07/netflix-simian-army.html" class="bg-info text-white" >Netflix Simian Army</a>. </p>   
+                    
+            
+                  <p>(50) 10. Based on what you now know about network 
+management tools, briefly explain how a tool such as Chaos Monkey could 
+be used by Target.com<br />
+                  Consider factors such as capacity and performance 
+management, and the impact of these on company financial results.<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q10" id="q10" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> </p>
+            <hr />
+
+        </div>  
+
+
+
+      
+<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+     
+    <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+      
+    <div id="ExercisePDF" class="collapse in  col-lg-12"> 
+            <p>Use a web browser to verify that you have published your website to https://classes.winona.edu/... <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible. <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <span id="dPath" ></span>              
+<script>document.getElementById("dPath").innerHTML = Path; </script>' folder.<br /> 
+</p>
+           <br />
+               
+          <p>(50) 11. Save your file 'WebPage.pdf' to the ' 
+                  <span id="ePath" ></span>              
+<script>document.getElementById("ePath").innerHTML = Path; </script>' folder.<br /> 
+
+
+          </p>
+
+      <div  class="text-danger" >
+         <h2>WebPage.pdf</h2>
+          <hr />
+      </div>
+
+        <p>  Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
+        
+        <ol>             
+          <li> Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+          <li> Select all of the screen shots to be combined. </li>         
+          <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+          <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>    
+          <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <span id="fPath" ></span>              
+              <script>document.getElementById("fPath").innerHTML = Path; </script>' folder.<br /> </li>
+        </ol>
+
+
+          <p>(50) 12. Save your file 'ScreenShots.pdf' to the ' 
+                  <span id="gPath" ></span>              
+<script>document.getElementById("gPath").innerHTML = Path; </script>' folder.<br /> 
+
+          </p>
+
+      <div  class="text-danger" >
+         <h2>ScreenShots.pdf</h2>
+          <hr />
+      </div>
+
+
+       <p>  &nbsp;</p>
+         <p>  Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative02.pdf</strong>&#39; in ' 
+                  <span id="hPath" ></span>              
+<script>document.getElementById("hPath").innerHTML = Path; </script>' folder.<br /> 
+
+         </p>
+
+
+        <p>(50) 13. Upload your file 'Summative06.pdf' to the D2L 'Summative06' Assignment folder.</p>
+
+      <div  class="text-danger" >
+         <h2>Summative06.pdf</h2>
+      </div>
+      <hr />
+
+        </div> 
+
+
+
+
+  <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+ 
+  <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+                <p>Use a browser to view your completed and published website at: https://classes.winona.edu/...      <br /> 
+                    Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>  </p>
+
+            (50) 14. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br /><br />
+
+            (50) 15. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.</div> 
+           <hr />
+
+ 
+     
+      <div class="col-lg-12"><br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br /></div>
+
+  
+  </form> 
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted" ></div>
+
+   <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../js/bootstrap.js"></script>
+  
+</body></html>
