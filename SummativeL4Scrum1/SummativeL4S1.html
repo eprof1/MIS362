@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
+    <script src="../js/constants.js"></script>
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 SummativeL4S1</title>
+</head>
+
+<body onload="setVariables()"> 
+
+  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+    <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+    <h1 class=" text-center">Lego 4 Scrum-Part 1</h1>
+
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="FirstName">First Name:</label>
+        <input class="form-control" name="FirstName" id="FirstName"  type="text" value="default first name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="LastName">Last Name:</label>
+        <input class="form-control" name="LastName" id="LastName"  type="text" value="default last name" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="pin">StarID:</label>
+        <input class="form-control" name="pin" id="pin"  type="text" value="default StarID" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="email">Email:</label>
+        <input class="form-control" name="email" id="email"  type="email" value="default email address" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="row col-lg-12">
+      <div class="col-lg-3">
+        <label class="text-primary" for="semester">Semester:</label>
+        <input class="form-control" name="semester" id="semester"  type="text" value="default" readonly="readonly">
+     </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="class">Class:</label>
+        <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+      </div>
+      <div class="col-lg-3">
+        <label class="text-primary" for="section">Section:</label>
+        <input class="form-control" name="section" id="section"  value="default" type="text"  readonly="readonly">
+      </div>
+      <div class="col-lg-3"> 
+        <label class="text-primary" for="assignment">Assignment:</label>
+        <input class="form-control" name="assignment" id="assignment" value="SummativeL4S1" type="text" readonly="readonly">
+      </div>    
+    </div>
+<!-- -end-Student, class and assignment information-end -->
+
+<!-- Calculate the correct path for saving the files -->
+<script>Path = startPath + xStarID + "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script> 
+
+
+        <div class="col-lg-12">
+            <br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br />
+        </div>
+  
+        <div class="col-lg-12 h3 text-danger">
+            750 Points <hr />
+        </div>
+      
+<!-- -start-objectives-start -->
+    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>      
+      <div id="Objectives" class=" collapse in col-lg-12">
+
+<!--Above this line similar except for Assignment number and title   -->
+  
+          <p>These exercises allow you to participate in a SCRUM.</p>
+          <p>After completing this assignment you will be able to:</p>
+          <ol>
+            <li>Identify the benefits of SCRUM </li>
+            <li>Identify how employees are grouped</li>
+            <li>Identify the impact of the team formation</li>
+           </ol>
+          <hr />
+        </div>
+  
+  
+    <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+      
+      <div id="Overview" class="collapse in col-lg-12">
+
+      <p>The goal of this assignment is to participate in an exercise to develop a plan for a Smart Gigabit Community using SCRUM planning. <br />
+          You are expected to devlop a working knowledge of this material from Chapter 9 of the book and earlier chapters.<br />
+            If you are having trouble there are several resources available, besides a Google Search.</p>
+            <p>Review the Lynda.com video:&nbsp; <a href="https://www.lynda.com/Business-Skills-tutorials/Scrum-Basics/550619-2.html" class="bg-info text-white" target="_blank" >Scrum: The Basics </a>&nbsp;(1h2m)<br />
+            </p>
+          <hr />
+          </div>
+            
+          
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Goal-Build a High Tech City</a></div>        
+      
+     <div id="Exercise01" class="collapse in col-lg-12"> 
+          <p>Time: 3 minutes</p>
+            <p>Envision the creation of a high technology <a href="https://www.hbci.com/2017/11/u-s-ignite-names-red-wing-ignite-a-smart-gigabit-community/" class="bg-info text-white" target="_blank">Smart Gigabit Community</a> in the southeast Minnesota region.<br />
+              <br />
+          The goals of this project are:</p>
+            <ul>
+                <li>Sustainable housing, clothing, food</li>
+                <li>Sustainable manufacturing, agriculture, silviculture</li>
+                <li>Progressive K-12 and higher education system using Open Educational Resources </li>
+                <li>High speed internet to support advanced digital technologies</li>
+                <li>Renewable energy</li>
+                <li>Advanced transportation infrastructure including
+                    <ul>
+                        <li>Autonomous vehicles</li>
+                        <li>Vehicle to vehicle communications</li>
+                        <li>Vehicle to infrastructure communications</li>
+                        <li>High speed rail</li>
+                        <li>Unmanned Aerial Vehicles</li>
+                        <li>Autonomous barges</li>
+                        <li>Facilities to handle intermodal containers</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Definitions:  </p>
+            <ul>
+                <li>Product Owner:  Professor Paulson</li>
+                <li>Development Teams: 5 or 6 teams of 4 to 6 students</li>
+                <li>Customer representatives</li>
+                <li>Scrum product teams: Product Owner + Development Teams</li>
+            </ul>
+          <p>Focus on the first sprint.<br />
+          </p>
+                
+              <p>(50) 1. Which one project goal is of most interest to you?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+
+              <p>(50) 2. Which project goal do you feel is the most difficult to achieve?</p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+
+              <p>(50) 3. Is this the first time that you have participated in a SCRUM activity?
+              </p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br /><br />
+          <hr />
+                
+            </div>   
+      
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Team Formation</a></div>
+
+        <div id="Exercise02" class="collapse in col-lg-12">  
+
+            <p>Time: 5 minutes</p>
+                <p>You have been assigned to a group in D2L.</p>
+         
+                <p>Log into D2L, under Communications&gt;Groups you will find your Group, and group members.</p>
+                <p> Meet with and introduce yourself to your group members.</p>               
+              
+              <p>(50) 4. Does your team have different backgrounds and view points on this project?
+              </p>
+                            
+              <!-- Enter your answer in the VALUE field below   GROK -->        
+              <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"><hr />             
+              
+         </div>  
+      
+
+         <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-User Story Mapping</a><a href="#Exercise03"></a></div>
+      
+        <div id="Exercise03" class="collapse in col-lg-12">  
+
+              <p>Time: 5 minutes</p>
+                <p>Begin by making a list of who will be the users of this product, the Smart Gigabit Community.</p>
+                <p>Write the names of your users on large Post-It notes.&nbsp; These will become the top layer of the story map.</p>
+              
+                   
+                  <p>(50) 5. Generate a list of three or more users, in order of importance.<br />
+                                
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"></p>
+            <hr />
+
+                       
+              </div>
+
+
+         <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-User Needs</a><a href="#Exercise04"></a></div>
+      
+        <div id="Exercise04" class="collapse in col-lg-12">  
+
+              <p>Time: 15 minutes</p>
+                <p>Discuss with your team which user should be satisfied first.<br />
+                    <br />
+                    (50) 6. Make a list of things that your most important user will need.<br />
+                    It may help to imagine a day in the life of this user, as a way to generate their needs and wants.<br />
+                    These will be the second level of the story map.<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> </p>
+                <p>Do this for at least three of your users.</p>
+            <hr /> 
+         </div>  
+
+
+         <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Features to Address User Needs</a><a href="#Exercise05"> </a></div>
+      
+        <div id="Exercise05" class="collapse in col-lg-12">  
+
+              <p>Time: 7 minutes</p>
+                <p>Each team brainstorms and develops ideas or features that will address these user needs.</p>
+                <p>Write these features on Post-It notes.&nbsp; They are the third tier of the story map.&nbsp; Place them on the board.</p>                  
+
+            
+                  <p>(50) 7. Write below some of the most important features for one of the users.<br />
+                                    
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> </p>
+            <hr />
+
+          </div>  
+
+      
+        <div class="col-lg-12"><a href="#Exercise06" class="btn btn-info" data-toggle="collapse">Exercise 6-Develop Releases</a><a href="#Exercise06"></a></div>
+      
+    <div id="Exercise06" class="collapse in col-lg-12">
+      
+          <p>Time: 20 minutes</p>
+            <p>Working with the Facilitator and all teams, focus on the list of features and develop of list of those that will add the most value for the least effort.</p>
+            <p>Using blue duct tape, place three long lanes on the story map to create three separate releases.</p>
+            <p>One way to classify the relesases is as follows (feel free to modify)</p>
+            <ul>
+                <li>Release 1-Minimum Viable Product</li>
+                <li>Release 2-Higher quality of service</li>
+                <li>Release 3-Scale up</li>
+            </ul>
+            <p>Activity:&nbsp; all team members are invited to go to the story board and move the features as they feel would be best.</p>
+
+                  <p>(50) 8. List the features in Release 1.<br />
+                                                      
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> </p>
+    
+               <hr />
+            </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise07" class="btn btn-info" data-toggle="collapse">Exercise 7-Product Backlog Refinement</a></div>
+      
+    <div id="Exercise07" class="collapse in col-lg-12"> 
+
+        <p>Time: 2 minutes</p>
+            <p>Two members of each team will go to the story board, and take each features&#39; Post-It note and place it in one of the columns (1, 2, 3, 5, 9, 13, 20). <br />
+            These columns represent the relative effort required to complete that feature.<br />
+            All participants are not to talk during this time.<br />
+            Participants are allowed to move any Post-It as they see fit.<br />
+
+        </p>
+            <p>The other team members need to observe and make sure that they agree with the classifications.</p>
+            <p><br />
+                (50) 9. What did the observing team members notice about this sorting process?<br />
+                                                      
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q9" id="q9" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+
+            </p><hr />
+        </div> 
+
+
+        <div class="col-lg-12"><a href="#Exercise08" class="btn btn-info" data-toggle="collapse">Exercise 8-Add Details</a></div>
+      
+    <div id="Exercise08" class="collapse in col-lg-12"> 
+
+        <p>Time: 18 minutes</p>
+            <p>Each team takes an item(Post-It note) from the backlog board, brings it to their table, clarifies open questions, and writes these details on the card.<br />
+                Then the item is placed back on the board, and takes another item and repeats the process. <br />
+                Note that just because a team adds details to an item does not mean that that team will later be working on that item.
+            </p>
+            <p>This process continues until details are added to all the items or 20 minutes passes.</p>
+            <p>Be sure to take a picture of the backlog matrix<br />
+
+        </p>
+            <p><br />
+                (50) 10. What did the observing team members notice about this sorting process?<br />
+                                                      
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q10" id="q10" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> 
+
+            </p><hr />
+        </div> 
+
+    
+
+        <div class="col-lg-12"><a href="#Exercise09" class="btn btn-info" data-toggle="collapse">Exercise 9-Prioritize Product Backlog</a></div>
+      
+    <div id="Exercise09" class="collapse in col-lg-12"> 
+
+        <p>Time: 5 minutes</p>
+            The Product Owner (Professor Paulson) will arrange and prioritize the Product Backlog items based on his perception of the business priorities.<br />
+               Possible guidelines: 
+                <ul>
+                    <li>items that define the plan of the city</li>
+                    <li>proper building of housing early on</li>
+                    <li>later building of complex items like hotels, conference centers</li>
+                    <li>still later work on shopping centers, dining</li>
+                </ul>
+            <br />
+            <p>
+
+                <img alt="prioritized product backlog" class="img-responsive"  src="PrioritizedProductBacklog.JPG" /><br />
+                Prioritized Product Backlog
+            </p>
+            <p><br />
+                (50) 11. What suggestion do you have to improve this prioritzation process?<br />
+                                                      
+                  <!-- Enter your answer in the VALUE field below   GROK -->        
+                  <input name="q11" id="q11" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text"> <br />
+                
+                This is the end of the Product Definition Process.<br />
+                Prepare next to build the product! 
+
+            </p><hr />
+        </div> 
+
+<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+     
+    <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+      
+    <div id="ExercisePDF" class="collapse in  col-lg-12"> 
+            <p>Use a web browser to verify that you have published your website to https://classes.winona.edu/... <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible. <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <span id="dPath" ></span>              
+<script>document.getElementById("dPath").innerHTML = Path; </script>' folder.<br /> 
+</p>
+           <br />
+               
+          <p>Save your file 'SummativeL4S1.pdf' to the ' 
+                  <span id="ePath" ></span>              
+<script>document.getElementById("ePath").innerHTML = Path; </script>' folder.<br /> 
+
+
+          </p>
+
+
+
+       <p>(100) 12. Upload your file 'SummativeL4S1.pdf' to the D2L 'SummativeL4S1' Assignment folder.</p>
+
+      <div  class="text-danger" >
+         <h2>SummativeL4S1.pdf</h2>
+      </div>
+      <hr />
+
+        </div> 
+
+
+
+
+  <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+ 
+  <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+                <p>Use a browser to view your completed and published website at: https://classes.winona.edu/...      <br /> 
+                    Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>  </p>
+
+            (50) 13. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br /><br />
+
+            (50) 14. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.</div> 
+           <hr />
+
+ 
+     
+      <div class="col-lg-12"><br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br /></div>
+
+  
+  </form> 
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted" ></div>
+
+   <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../js/bootstrap.js"></script>
+  
+</body></html>
