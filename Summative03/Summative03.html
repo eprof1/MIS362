@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap -->
-	<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- constant file to update email, firstname, lastname, starid, section on students' pages -->
     <script src="../js/constants.js"></script>
@@ -16,350 +16,423 @@
     <title>MIS362 Summative03</title>
 </head>
 
-<body onload="setVariables()"> 
+<body onload="setVariables()">
 
-  <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
-    <input name="InstID" id="InstID" value="00617282" type="hidden">
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
 
-    <h1 class=" text-center">Continuous Integration, Continuous Delivery</h1>
+        <h1 class=" text-center">Continuous Integration, Continuous Delivery</h1>
 
-<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
-    <div class="row col-lg-12">
-      <div class="col-lg-3">
-        <label class="text-primary" for="FirstName">First Name:</label>
-        <input class="form-control" name="FirstName" id="FirstName"  type="text" value="default first name" readonly="readonly">
-      </div>
-      <div class="col-lg-3">
-        <label class="text-primary" for="LastName">Last Name:</label>
-        <input class="form-control" name="LastName" id="LastName"  type="text" value="default last name" readonly="readonly">
-      </div>
-      <div class="col-lg-3">
-        <label class="text-primary" for="pin">StarID:</label>
-        <input class="form-control" name="pin" id="pin"  type="text" value="default StarID" readonly="readonly">
-      </div>
-      <div class="col-lg-3">
-        <label class="text-primary" for="email">Email:</label>
-        <input class="form-control" name="email" id="email"  type="email" value="default email address" readonly="readonly">
-      </div>
-    </div>
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="FirstName">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" value="default first name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="LastName">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" value="default last name" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="pin">StarID:</label>
+                <input class="form-control" name="pin" id="pin" type="text" value="default StarID" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="email">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" value="default email address" readonly="readonly">
+            </div>
+        </div>
 
-    <div class="row col-lg-12">
-      <div class="col-lg-3">
-        <label class="text-primary" for="semester">Semester:</label>
-        <input class="form-control" name="semester" id="semester"  type="text" value="default" readonly="readonly">
-     </div>
-      <div class="col-lg-3">
-        <label class="text-primary" for="class">Class:</label>
-        <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
-      </div>
-      <div class="col-lg-3">
-        <label class="text-primary" for="section">Section:</label>
-        <input class="form-control" name="section" id="section"  value="default" type="text"  readonly="readonly">
-      </div>
-      <div class="col-lg-3"> 
-        <label class="text-primary" for="assignment">Assignment:</label>
-        <input class="form-control" name="assignment" id="assignment" value="Summative03" type="text" readonly="readonly">
-      </div>    
-    </div>
-<!-- -end-Student, class and assignment information-end -->
+        <div class="row col-lg-12">
+            <div class="col-lg-3">
+                <label class="text-primary" for="semester">Semester:</label>
+                <input class="form-control" name="semester" id="semester" type="text" value="default" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="class">Class:</label>
+                <input class="form-control" name="class" id="class" value="xClass" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="section">Section:</label>
+                <input class="form-control" name="section" id="section" value="default" type="text" readonly="readonly">
+            </div>
+            <div class="col-lg-3">
+                <label class="text-primary" for="assignment">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" value="Summative03" type="text" readonly="readonly">
+            </div>
+        </div>
+        <!-- -end-Student, class and assignment information-end -->
 
-<!-- Calculate the correct path for saving the files -->
-<script>Path = startPath + xStarID + "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script> 
+        <!-- Calculate the correct path for saving the files -->
+        <script>Path = startPath + xStarID + "&#92;OneDrive - MNSCU&#92;" + xClass + "&#92;" + document.getElementById("assignment").value + "&#92;"; </script>
 
 
         <div class="col-lg-12">
-            <br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br />
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
         </div>
-  
-        <div class="col-lg-12 h3 text-danger">
-            1500 Points <hr />
-        </div>
-      
-<!-- -start-objectives-start -->
-    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>      
-      <div id="Objectives" class=" collapse in col-lg-12">
 
-<!--Above this line similar except for Assignment number and title   -->
-  
-          <p>These exercises introduce basic skills and technologies used in a Linux  product development environment.</p>
-          <p>After completing this assignment you will be able to:</p>
-          <ol>
-            <li>Create a virtual machine cluster based application development environment</li>
-            <li>Review your development environment</li>
-            <li>Capture and review your log files </li>
-           </ol>
-          <hr />
+        <div class="col-lg-12 h3 text-danger">
+            1500 Points
+            <hr />
         </div>
-  
-  
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises introduce basic skills and technologies used in a Linux  product development environment.</p>
+            <p>After completing this assignment you will be able to:</p>
+            <ol>
+                <li>Create a virtual machine cluster based application development environment</li>
+                <li>Review your development environment</li>
+                <li>Capture and review your log files </li>
+            </ol>
+            <hr />
+        </div>
+
+
         <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
-      
-      <div id="Overview" class="collapse in">
-        The goal of this assignment is to familiarize you with a Linux based product development environment. <br />
-          <p>You are expected to devlop a working knowledge of the following.<br />
-            If you are having trouble there are several resources available, besides a Google Search<br />
-            You can also ask a teaching assistant or ask the instructor for assistance.</p>
-          <ol>
-            <li>Installing applications.
+
+        <div id="Overview" class="collapse in">
+            The goal of this assignment is to familiarize you with a Linux based product development environment.
+            <br />
+            <p>
+                You are expected to devlop a working knowledge of the following.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or ask the instructor for assistance.
+            </p>
+            <ol>
+                <li>Installing applications.
             	<ol>
-                	<li>Virtual Box</li>
+                    <li>Virtual Box</li>
                     <li>Chef Development Kit</li>
                     <li>Vagrant</li>
                 </ol>
-            </li>
-            <li>Creating a virtual environment and provisioning applications from scripts
+                </li>
+                <li>Creating a virtual environment and provisioning applications from scripts
             	<ol>
-                	<li>Troubleshooting</li>
+                    <li>Troubleshooting</li>
                     <li>Learning basic Linux or Windows CLI (command line interface) commands</li>
                     <li>Following the <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" class="bg-info text-white" target="_blank">Calavera Project</a></li>
                 </ol>
-                
-            </li>
-          </ol>
-          <hr />
-         </div>
-      
- <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-DevOps Environment</a></div>        
-      
-     <div id="Exercise01" class="col-lg-12 collapse in"> 
-          <p>Refer to these instructions, download and install the following programs on your laptop:</p>
-          <ol>
-              <li><a href="https://www.virtualbox.org/" class="bg-info text-white" target="_blank">Virtual Box for Windows  </a> (~116MB) using the default settings</li> 
-              <li>the <a href="https://downloads.chef.io/chef-dk/" class="bg-info text-white" target="_blank">Chef Development Kit</a> (~326MB) using the default settings</li>
-              <li><a href="http://www.vagrantup.com/downloads.html" class="bg-info text-white" target="_blank">Vagrant</a> (~165MB) using the default settings, then restart your laptop</li>
-              <li>the <a href="https://github.com/berkshelf/vagrant-berkshelf" class="bg-info text-white" target="_blank">Vagrant Berkshelf plugin </a>, by clicking the start button, typing in 'cmd' to open the Command Prompt window, then typing in <code> vagrant plugin install vagrant-berkshelf </code><br /> 
-              <img src="BerkshelfPlugIn.PNG" class="img-responsive" alt="Berkshelf plugin" ><br /></li>
-              <li>the <a href="https://github.com/dotless-de/vagrant-vbguest" class="bg-info text-white" target="_blank">Vagrant VBoxGuest plugin</a>, by typing in the Command Prompt window <code>vagrant plugin install vagrant-vbguest </code><br /> 
-              <img src="VBguestPlugIn.PNG" class="img-responsive" alt="VBguest Plugin" ></li>
-          </ol>
-          
-           <br />
+
+                </li>
+            </ol>
+            <hr />
+        </div>
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-DevOps Environment</a></div>
+
+        <div id="Exercise01" class="col-lg-12 collapse in">
+            <p>Refer to the websites for the following software applications.:</p>
+            <ol>
+                <li><a href="https://www.virtualbox.org/" class="bg-info text-white" target="_blank">Virtual Box for Windows  </a>(~116MB) </li>
+                <li>the <a href="https://downloads.chef.io/chef-dk/" class="bg-info text-white" target="_blank">Chef Development Kit</a> (~326MB)</li>
+                <li><a href="http://www.vagrantup.com/downloads.html" class="bg-info text-white" target="_blank">Vagrant</a> (~165MB) </li>
+                <li>the <a href="https://github.com/berkshelf/vagrant-berkshelf" class="bg-info text-white" target="_blank">Vagrant Berkshelf plugin </a>,
+                    <br />
+                    <img src="BerkshelfPlugIn.PNG" class="img-responsive" alt="Berkshelf plugin"><br />
+                </li>
+                <li>the <a href="https://github.com/dotless-de/vagrant-vbguest" class="bg-info text-white" target="_blank">Vagrant VBoxGuest plugin</a>, by typing in the Command Prompt window <code>vagrant plugin install vagrant-vbguest </code>
+                    <br />
+                    <img src="VBguestPlugIn.PNG" class="img-responsive" alt="VBguest Plugin"></li>
+            </ol>
+
+            <br />
             Refer to the <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" class="bg-info text-white" target="_blank">Calavera Project</a> Windows installation instructions as needed.<br />
-          <p></p>
-          <p>Install the above software to prepare your development environment.</p>
-                <p> Make a screen shot showing Virtual Box, Chef and Vagrant running on your laptop. <br />
-                Use the Snipping Tool to make a screen shot that shows the History.<br />
+            <p></p>
+            <p>Examine the above software to learn how to create a development environment.</p>
+            <p>
+                Use the Snipping Tool to make a screen shot showing Virtual Box, Chef and Vagrant websites.
+                <br />
                 Save the screen shot as "Ex1" as a .gif, .png or .jpg file in an appropriate folder location as you will be needing it later.<br />
-              (200) 1. Save the screen shot  as &quot;Ex1&quot; in your ' 
-                  <span id="aPath" ></span>                   
-                  <script>document.getElementById("aPath").innerHTML = Path </script>' folder.<br /> 
-     
-                  You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                (200) 1. Save the screen shot  as &quot;Ex1&quot; in your ' 
+                  <span id="aPath"></span>
+                <script>document.getElementById("aPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
                   <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
-              </p>
+            </p>
 
-         </div>  
+        </div>
 
-      <div  class="col-lg-12 text-danger" >
-         <h2>Screen Shot Ex1</h2>
-          <hr />
-      </div>   
-      
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex1</h2>
+            <hr />
+        </div>
 
 
-      
-      
+
+
+
         <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-GitHub Cloning</a></div>
-        <div id="Exercise02" class="collapse in col-lg-12">  
-              <p>Use GitBash to obtain the necessary script files.<br />
-              Note: GitBash must have already been properly installed for this to work.</p> 
-                   <p> Using Windows File Explorer, navigate to C:\Users\'StarID'\Documents\GitHub<br />
-                       Right click the folder 'GitHub' and choose 'Git Bash Here'.<br />
-                       Type in the following to Git Bash, which has 'MINGW64' in the titlebar.<br />
-                       <code>git clone https://github.com/CharlesTBetz/Calavera.git</code><br />
-                       After downloading the files, type in <code>cd Calavera</code> so that 'Calvera' is the working directory, so you can run scripts.<br />
-                       <img src="CloneCalavera.PNG" class="img-responsive" alt="cloning Calavera" >
-                   </p>                  
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <p>
+                Use GitBash to obtain the necessary script files.<br />
+                Note: GitBash must have already been properly installed for this to work.
+            </p>
+            <p>
+                Using Windows File Explorer, navigate to C:\Users\'StarID'\Documents\GitHub<br />
+                Right click the folder 'GitHub' and choose 'Git Bash Here'.<br />
+                Type in the following to Git Bash, which has 'MINGW64' in the titlebar.<br />
+                <code>git clone https://github.com/CharlesTBetz/Calavera.git</code><br />
+                After downloading the files, type in <code>cd Calavera</code> so that 'Calvera' is the working directory, so you can run scripts.<br />
+                <img src="CloneCalavera.PNG" class="img-responsive" alt="cloning Calavera">
+            </p>
 
-                       
-                   
-                   <p>(100) 2. Make a screen shot of your Windows File Explorer GitHub 'Calavera' directory showing the files and folders. <br />
-            Use the Snipping Tool to make a screen shot that shows the History.<br />
-            Save the screen shot  as "Ex2_GitHub" as a .gif, .png or 
+
+
+            <p>
+                (100) 2. Make a screen shot of your Windows File Explorer GitHub 'Calavera' directory showing the files and folders.
+                <br />
+                Use the Snipping Tool to make a screen shot.<br />
+                Save the screen shot  as "Ex2_GitHub" as a .gif, .png or 
 .jpg file in an appropriate folder location as you will be needing it 
 later.
         <br />
-              Save the screen shot  as &quot;Ex2&quot; in your ' 
-                  <span id="cPath" ></span>                   
-                  <script>document.getElementById("cPath").innerHTML = Path </script>' folder.<br /> 
-     
-                  You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                Save the screen shot  as &quot;Ex2&quot; in your ' 
+                  <span id="cPath"></span>
+                <script>document.getElementById("cPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
                   <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
-              </p>
+            </p>
 
-         </div>  
+        </div>
 
-      <div  class="col-lg-12 text-danger" >
-         <h2>Screen Shot Ex2</h2>
-          <hr />
-      </div>   
-      
-      
-         <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Scripted Virtual Machines</a></div>
-      
-        <div id="Exercise03" class="collapse in col-lg-12">  
-              <p>Virtual machines can easily be created by running Vagrant, and applications can be installed using Chef.<br />
-                   </p><p>In GitBash type in the following to create your virtual development/operations environment. <br />
-                   This script will take about 20 minutes to run. <br />
-                   <code>./winstart.sh </code> <br />
-                   You will receive multiple User Account Control (UAC) 
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex2</h2>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Scripted Virtual Machines</a></div>
+
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <p>
+                Virtual machines can easily be created by running Vagrant, and applications can be installed using Chef.<br />
+            </p>
+            <p>
+                Do not actually run these commands, rather review what these commands accomplish.<br />
+                In GitBash type in the following to create your virtual development/operations environment.
+                <br />
+                This script will take about 20 minutes to run.
+                <br />
+                <code>./winstart.sh </code>
+                <br />
+                You will receive multiple User Account Control (UAC) 
 notifications as the virtual machines start, and a network security 
 alert.<br />
-                   Authorize all with the default values.<br />
-                   This is downloading and installing a 1GB Ubuntu 
+                Authorize all with the default values.<br />
+                This is downloading and installing a 1GB Ubuntu 
 image, it may take about 25 minutes to complete, depending on your 
 network connection, and how many packages need to be updated.<br />
-                   As it runs there will be a lot of text written to the Git Bash window.<br />
-                   <img src="GetUbuntu.PNG" class="img-responsive" alt="getting Ubuntu" ><br /></p>
-              
-              <p></p>          
-                   
-                  <p>(200) 3. After running the script, in Git Bash, 
+                As it runs there will be a lot of text written to the Git Bash window.<br />
+                <img src="GetUbuntu.PNG" class="img-responsive" alt="getting Ubuntu"><br />
+            </p>
+
+            <p></p>
+
+            <p>
+                (200) 3. After running the script, in Git Bash, 
 take a screen shot of the last few lines on your screen, which should 
 look like this, but with your StarID<br />
-                    <img src="CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success" ><br /> Use the Snipping Tool to make the screen shot <br />
-            Save the screen shot  as &quot;Ex3&quot; as a .gif, .png or 
+                <img src="CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success"><br />
+                Use the Snipping Tool to make the screen shot
+                <br />
+                Save the screen shot  as &quot;Ex3&quot; as a .gif, .png or 
 .jpg file in the same folder location as the other screen shots as you 
 will be needing it later.<br />
-              Save the screen shot  as &quot;Ex3&quot; in your ' 
-                  <span id="bPath" ></span>                   
-                  <script>document.getElementById("bPath").innerHTML = Path </script>' folder.<br /> 
-     
-                  You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                Save the screen shot  as &quot;Ex3&quot; in your ' 
+                  <span id="bPath"></span>
+                <script>document.getElementById("bPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
                   <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
-              </p>
+            </p>
 
-         </div>  
+        </div>
 
-      <div  class="col-lg-12 text-danger" >
-         <h2>Screen Shot Ex3</h2>
-          <hr />
-      </div>   
-      
-
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex3</h2>
+            <hr />
+        </div>
 
 
 
-         <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Multiple Virtual Machines</a></div>
-      
-        <div id="Exercise04" class="collapse in col-lg-12">  
-              <p>Additional virtual machines for your company can now 
+
+
+        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Multiple Virtual Machines</a></div>
+
+        <div id="Exercise04" class="collapse in col-lg-12">
+            <p>
+                Additional virtual machines for your company can now 
 easily be created by running Vagrant, and applications can be installed 
 using Chef.<br />
-                   </p><p>In GitBash type in the following to create your virtual development/operations environment. <br />
-                   Note that this will take about 20 minutes to run. <br />
-                   <code>vagrant up cerebro1 brazos1 espina1 hombros1</code> <br />
-                   Note that you will again be asked to approve several UAC warning messages.<br />
-              </p>          
-                   
-                  <p>(200) 4. After running the script, in Git Bash, 
+            </p>
+            <p>
+                Do not actually run this command, instead research what it will do.<br />
+                In GitBash type in the following to create your virtual development/operations environment.
+                <br />
+                Note that this will take about 20 minutes to run.
+                <br />
+                <code>vagrant up cerebro1 brazos1 espina1 hombros1</code>
+                <br />
+                Note that you will again be asked to approve several UAC warning messages.<br />
+            </p>
+
+            <p>
+                (200) 4. After running the script, in Git Bash, 
 take a screen shot of the last few lines on your screen, which should 
-look like this, but with your StarID<br />
-                    <img src="CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success" ><br /> Use the Snipping Tool to make the screen shot <br />
-            Save the screen shot  as "Ex4" as a .gif, .png or 
+look like this<br />
+                <img src="CalaveraSuccess.PNG" class="img-responsive" alt="Calavera success"><br />
+                Use the Snipping Tool to make the screen shot
+                <br />
+                Save the screen shot  as "Ex4" as a .gif, .png or 
 .jpg file in the same folder location as the other screen shots as you 
 will be needing it later.<br />
 
 
-              Save the screen shot  as &quot;Ex4&quot; in your ' 
-                  <span id="dPath" ></span>                   
-                  <script>document.getElementById("dPath").innerHTML = Path </script>' folder.<br /> 
-     
-                  You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
+                Save the screen shot  as &quot;Ex4&quot; in your ' 
+                  <span id="dPath"></span>
+                <script>document.getElementById("dPath").innerHTML = Path </script>
+                ' folder.<br />
+
+                You will be combining screen shots from several exercises at the end of this assignment, just as you did in 
                   <a href="https://eprofessor.azurewebsites.net/Formative00/Formative00.html#PDFfileCreation" class="bg-info text-white" target="_blank">Formative00</a>-PDF File Creation. 
-              </p>
+            </p>
 
-         </div>  
+        </div>
 
-      <div  class="col-lg-12 text-danger" >
-         <h2>Screen Shot Ex4</h2>
-          <hr />
-      </div>   
-      
-
-         <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Calavera Settings</a></div>
-      
-        <div id="Exercise05" class="collapse in col-lg-12">  
-
-            
-            
-            
-              <p>(50) 5. Review the materials on <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" class="bg-info text-white" target="_blank">the Calvera project</a> and answer the following question.<br />
-              </p>
-              <p>What is the purpose of cerebro?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q5" id="q5" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
-
-              <p>(50) 6. Review the materials on the Calvera project and answer the following question.<br />
-              </p>
-              <p>What is the purpose of brazos?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q6" id="q6" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
-
-              <p>(50) 7. Review the materials on the Calvera project and answer the following question.<br />
-              </p>
-              <p>What is the purpose of espina?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q7" id="q7" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
-
-              <p>(50) 8. Review the materials on the Calvera project and answer the following question.<br />
-              </p>
-              <p>What is the purpose of hombros?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q8" id="q8" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
-
-   <hr />                
-              </div>  
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex4</h2>
+            <hr />
+        </div>
 
 
-         <div class="col-lg-12"><a href="#Exercise06" class="btn btn-info" data-toggle="collapse">Exercise 6-Inspecting Virtual Machines</a></div>
-      
-        <div id="Exercise06" class="collapse in col-lg-12">  
-              <p>Now that you have the four virtual machines provisioned, open Virtual Box to examine the settings.<br />
-              </p>          
-                   
-                  <p>(200) 9. After opening Virtual Box, take a screen shot of the left side of the screen, which should list four virtual machines.<br />
-                    Use the Snipping Tool to make the screen shot <br />
-            Save the screen shot  as "Ex5 _VirtualBox" as a .gif, .png or
+        <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Calavera Settings</a></div>
+
+        <div id="Exercise05" class="collapse in col-lg-12">
+
+
+
+
+            <p>
+                (50) 5. Review the materials on <a href="https://github.com/dm-academy/Calavera/blob/master/docs/Installation.md" class="bg-info text-white" target="_blank">the Calvera project</a> and answer the following question.<br />
+            </p>
+            <p>
+                What is the purpose of cerebro?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                (50) 6. Review the materials on the Calvera project and answer the following question.<br />
+            </p>
+            <p>
+                What is the purpose of brazos?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                (50) 7. Review the materials on the Calvera project and answer the following question.<br />
+            </p>
+            <p>
+                What is the purpose of espina?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                (50) 8. Review the materials on the Calvera project and answer the following question.<br />
+            </p>
+            <p>
+                What is the purpose of hombros?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Exercise06" class="btn btn-info" data-toggle="collapse">Exercise 6-Inspecting Virtual Machines</a></div>
+
+        <div id="Exercise06" class="collapse in col-lg-12">
+            <p>
+                Now that you have the four virtual machines provisioned, open Virtual Box to examine the settings.<br />
+            </p>
+
+            <p>
+                (200) 9. After studying Virtual Box, take a screen shot of the Virtual Box website.<br />
+                Use the Snipping Tool to make the screen shot
+                <br />
+                Save the screen shot  as "Ex5 _VirtualBox" as a .gif, .png or
  .jpg file in the same folder location as the other screen shots as you 
 will be needing it later.<br />
-            
-            
-            
-              </p><p>(50) 10. Review the Virtual Box settings and answer the following question.<br />
-              </p>
-              <p>What is the cerebro operating system?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q10" id="q10" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
+            </p>
 
-              <p>(50) 11. Review the Virtual Box settings and answer the following question.<br />
-              </p>
-              <p>How many network adapters are there in brazos?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q11" id="q11" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
+        </div>
 
-              <p>(50) 12. Review the Virtual Box settings and answer the following question.<br />
-              </p>
-              <p>How many shared folders, and list the 'Machine Folder' used for the first one, for espina?<br />
-              </p>
-              
-              <!-- Enter your answer in the VALUE field below   GROK -->        
-              <input name="q12" id="q12" size="120" maxlength="120" class="form-control"  value="Enter your answer here" type="text"> <br />
 
-                   
-<hr />
+        <div class="col-lg-12 text-danger">
+            <h2>Screen Shot Ex5</h2>
+            <hr />
+        </div>
+
+        <div class="col-lg-12">
+
+            <p>
+                (50) 10. Review the Virtual Box settings and answer the following question.<br />
+            </p>
+            <p>
+                What is the cerebro operating system?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q10" id="q10" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                (50) 11. Review the Virtual Box settings and answer the following question.<br />
+            </p>
+            <p>
+                How many network adapters are there in brazos?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q11" id="q11" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+            <p>
+                (50) 12. Review the Virtual Box settings and answer the following question.<br />
+            </p>
+            <p>
+                How many shared folders, and list the 'Machine Folder' used for the first one, for espina?<br />
+            </p>
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input name="q12" id="q12" size="120" maxlength="120" class="form-control" value="Enter your answer here" type="text">
+            <br />
+
+
+            <hr />
 
         </div>
 
@@ -368,112 +441,132 @@ will be needing it later.<br />
 
 
 
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
 
-<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
 
-     
-    <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
-      
-    <div id="ExercisePDF" class="collapse in  col-lg-12"> 
-            <p>Use a web browser to verify that you have published your website to https://classes.winona.edu/... <br />
-                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible. <br />
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
                 From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
-                  <span id="iPath" ></span>              
-<script>document.getElementById("iPath").innerHTML = Path; </script>' folder.<br /> 
-</p>
-           <br />
-               
-          <p>(50) 13. Save your file 'WebPage.pdf' to the ' 
-                  <span id="ePath" ></span>              
-<script>document.getElementById("ePath").innerHTML = Path; </script>' folder.<br /> 
+                  <span id="iPath"></span>
+                <script>document.getElementById("iPath").innerHTML = Path; </script>
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 13. Save your file 'WebPage.pdf' to the ' 
+                  <span id="ePath"></span>
+                <script>document.getElementById("ePath").innerHTML = Path; </script>
+                ' folder.<br />
 
 
-          </p>
+            </p>
 
-      <div  class="text-danger" >
-         <h2>WebPage.pdf</h2>
-          <hr />
-      </div>
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
 
-        <p>  Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
-        
-        <ol>             
-          <li> Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
-          <li> Select all of the screen shots to be combined. </li>         
-          <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
-          <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>    
-          <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
-              <span id="fPath" ></span>              
-              <script>document.getElementById("fPath").innerHTML = Path; </script>' folder.<br /> </li>
-        </ol>
+            <p>Create one .pdf (portable document format) file from the screen shots that you have taken by following these steps.</p>
 
-
-          <p>(50) 14. Save your file 'ScreenShots.pdf' to the ' 
-                  <span id="gPath" ></span>              
-<script>document.getElementById("gPath").innerHTML = Path; </script>' folder.<br /> 
-
-          </p>
-
-      <div  class="text-danger" >
-         <h2>ScreenShots.pdf</h2>
-          <hr />
-      </div>
+            <ol>
+                <li>Open File Explorer, make sure the screen shot files are properly named(Ex1, Ex2 , Ex3.. ) &nbsp; </li>
+                <li>Select all of the screen shots to be combined. </li>
+                <li>Right Click and select &#39;Print&#39; from the short-cut menu.      </li>
+                <li>In the bottom center of the &#39;Print Pictures&#39; dialog box uncheck the box &quot;Fit picture to frame&quot;</li>
+                <li>Click on &#39;Print&#39; and save the file with the name&nbsp; &quot;ScreenShots.pdf&quot; in your '
+              <span id="fPath"></span>
+                    <script>document.getElementById("fPath").innerHTML = Path; </script>
+                    ' folder.<br />
+                </li>
+            </ol>
 
 
-       <p>  &nbsp;</p>
-         <p>  Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative03.pdf</strong>&#39; in ' 
-                  <span id="hPath" ></span>              
-<script>document.getElementById("hPath").innerHTML = Path; </script>' folder.<br /> 
+            <p>
+                (50) 14. Save your file 'ScreenShots.pdf' to the ' 
+                  <span id="gPath"></span>
+                <script>document.getElementById("gPath").innerHTML = Path; </script>
+                ' folder.<br />
 
-         </p>
+            </p>
 
-        <p>(50) 15. Upload your file 'Summative03.pdf' to the D2L 'Summative03' Assignment folder.</p>
-
-      <div  class="text-danger" >
-         <h2>Summative03.pdf</h2>
-      </div>
-      <hr />
-
-        </div> 
+            <div class="text-danger">
+                <h2>ScreenShots.pdf</h2>
+                <hr />
+            </div>
 
 
+            <p>&nbsp;</p>
+            <p>
+                Use PDFill to merge the <strong>WebPage.pdf</strong> file with the <strong>ScreenShots.pdf </strong>file, and save it as &#39;<strong>Summative03.pdf</strong>&#39; in ' 
+                  <span id="hPath"></span>
+                <script>document.getElementById("hPath").innerHTML = Path; </script>
+                ' folder.<br />
+
+            </p>
+
+            <p>(50) 15. Upload your file 'Summative03.pdf' to the D2L 'Summative03' Assignment folder.</p>
+
+            <div class="text-danger">
+                <h2>Summative03.pdf</h2>
+            </div>
+            <hr />
+
+        </div>
 
 
-  <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
- 
-  <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
-                <p>Use a browser to view your completed and published website at: https://classes.winona.edu/...      <br /> 
-                    Ensure that you have linked this assignment on your home page.
-                Note that your screen shots do not have to be completed to perform this step.<br />  </p>
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br />
+            </p>
 
             (50) 16. Home Page Hyperlink<br />
-            Check and verify that this assignment is hyperlinked on your home page.<br /><br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
 
             (50) 17. Assignment submission<br />
             Press the Submit button at the top or bottom of this page.
-                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.</div> 
-           <hr />
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
 
- 
-     
-      <div class="col-lg-12"><br /><input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"> <br /></div>
 
-  
-  </form> 
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
 
 
 
     <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted" ></div>
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
 
-   <div id="xfooter" class=" col-lg-12 text-muted"></div>
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="../js/jquery-1.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-1.js"></script>
 
-	<!-- Include all compiled plugins (below), or include individual files as needed --> 
-	<script src="../js/bootstrap.js"></script>
-  
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.js"></script>
+
 </body>
 
 </html>
